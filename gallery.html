@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Heart of Generation Foundation</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/logo.png" alt="Foundation Logo" class="w-12 h-12 object-contain">
+        <h1 class="text-xl font-bold text-red-600">Heart of Generation Foundation</h1>
+      </div>
+      <ul class="hidden md:flex space-x-8 font-semibold">
+        <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+        <li><a href="about.html" class="hover:text-red-500">About</a></li>
+        <li><a href="programs.html" class="hover:text-red-500">Programs</a></li>
+        <li><a href="donate.html" class="hover:text-red-500">Donate</a></li>
+        <li><a href="contact.html" class="hover:text-red-500">Contact</a></li>
+        <li><a href="gallery.html" class="text-red-500">Gallery</a></li>
+      </ul>
+      <button class="md:hidden text-gray-700" id="menu-toggle">☰</button>
+
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="pt-28 text-center bg-red-600 text-white py-16">
+    <h1 class="text-4xl font-bold mb-3">Our Gallery</h1>
+    <p class="text-lg max-w-2xl mx-auto">
+      Explore the heartwarming moments from our outreach, feeding programs, medical camps, and more.
+    </p>
+  </header>
+
+  <!-- Albums Section -->
+  <section id="album-section" class="max-w-6xl mx-auto py-16 px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div onclick="openAlbum('feeding')"
+      class="cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="assets/images/water.jpg" alt="Feeding Program" class="w-full h-56 object-cover">
+      <div class="p-5">
+        <h2 class="text-xl font-bold text-red-600 mb-2">Feeding Program</h2>
+        <p class="text-gray-600">Sharing meals, smiles, and love with communities in need.</p>
+      </div>
+    </div>
+
+    <div onclick="openAlbum('medical')"
+      class="cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="assets/images/community.jpg" alt="Medical Camp" class="w-full h-56 object-cover">
+      <div class="p-5">
+        <h2 class="text-xl font-bold text-red-600 mb-2">Medical Camp</h2>
+        <p class="text-gray-600">Providing health checkups and medical support to the community.</p>
+      </div>
+    </div>
+
+    <div onclick="openAlbum('youth')"
+      class="cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="assets/images/education.jpg" alt="Youth Empowerment" class="w-full h-56 object-cover">
+      <div class="p-5">
+        <h2 class="text-xl font-bold text-red-600 mb-2">Youth Empowerment</h2>
+        <p class="text-gray-600">Equipping the next generation with skills and opportunities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Album View -->
+  <section id="album-view" class="hidden max-w-6xl mx-auto py-16 px-6">
+    <button onclick="goBack()" class="mb-8 flex items-center text-red-600 font-semibold hover:underline">
+      ← Back to Albums
+    </button>
+    <h2 id="album-title" class="text-3xl font-bold text-center mb-10 text-red-600"></h2>
+    <div id="album-grid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox hidden">
+    <button onclick="closeLightbox()" class="absolute top-5 right-8 text-white text-3xl font-bold">✕</button>
+    <button onclick="prevImage()" class="absolute left-6 text-white text-4xl font-bold">&#10094;</button>
+    <img id="lightbox-img" src="" alt="Photo" />
+    <button onclick="nextImage()" class="absolute right-6 text-white text-4xl font-bold">&#10095;</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6 mt-16">
+    <p>&copy; <span id="year"></span> Heart of Generation Foundation. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const albums = {
+      feeding: {
+        title: "Feeding Program",
+        images: [
+          "assets/images/water.jpg",
+          "assets/images/water.jpg",
+          "assets/images/water.jpg",
+          "assets/images/water.jpg",
+        ],
+      },
+      medical: {
+        title: "Medical Camp",
+        images: [
+          "assets/images/healthcare.jpg",
+          "assets/images/healthcare.jpg",
+          "assets/images/healthcare.jpg",
+          "assets/images/community.jpg",
+          "assets/images/community.jpg",
+          "assets/images/community.jpg",
+        ],
+      },
+      youth: {
+        title: "Youth Empowerment",
+        images: [
+          "assets/images/community.jpg",
+          "assets/images/community.jpg",
+          "assets/images/community.jpg",
+          "assets/images/community.jpg",
+          "assets/images/community.jpg",
+          "assets/images/community.jpg",
+        ],
+      },
+    };
+
+    let currentAlbum = [];
+    let currentIndex = 0;
+
+    function openAlbum(name) {
+      const album = albums[name];
+      document.getElementById("album-section").classList.add("hidden");
+      document.getElementById("album-view").classList.remove("hidden");
+
+      document.getElementById("album-title").textContent = album.title;
+      const grid = document.getElementById("album-grid");
+      grid.innerHTML = "";
+
+      currentAlbum = album.images;
+
+      album.images.forEach((src, index) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.className = "w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition cursor-pointer";
+        img.onclick = () => openLightbox(index);
+        grid.appendChild(img);
+      });
+    }
+
+    function goBack() {
+      document.getElementById("album-view").classList.add("hidden");
+      document.getElementById("album-section").classList.remove("hidden");
+    }
+
+    function openLightbox(index) {
+      currentIndex = index;
+      document.getElementById("lightbox").classList.remove("hidden");
+      document.getElementById("lightbox-img").src = currentAlbum[index];
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.add("hidden");
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % currentAlbum.length;
+      document.getElementById("lightbox-img").src = currentAlbum[currentIndex];
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + currentAlbum.length) % currentAlbum.length;
+      document.getElementById("lightbox-img").src = currentAlbum[currentIndex];
+    }
+  </script>
+</body>
+
+</html>

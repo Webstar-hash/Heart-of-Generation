@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Programs | Heart of Generation Foundation</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-3">
+        <img src="assets/logo.png" alt="Foundation Logo" class="w-12 h-12 object-contain">
+        <h1 class="text-xl font-bold text-red-600">Heart of Generation Foundation</h1>
+      </div>
+      <ul class="hidden md:flex space-x-8 font-semibold">
+        <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+        <li><a href="about.html" class="hover:text-red-500">About</a></li>
+        <li><a href="programs.html" class="text-red-500">Programs</a></li>
+        <li><a href="donate.html" class="hover:text-red-500">Donate</a></li>
+        <li><a href="contact.html" class="hover:text-red-500">Contact</a></li>
+        <li><a href="gallery.html" class="hover:text-red-500">Gallery</a></li>
+      </ul>
+      <button class="md:hidden text-gray-700" id="menu-toggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pt-28 bg-red-600 text-white text-center py-16">
+    <h1 class="text-4xl font-bold mb-3" data-aos="fade-down">Our Programs</h1>
+    <p class="text-lg max-w-2xl mx-auto" data-aos="fade-up">
+      Discover how we empower communities through impactful initiatives.
+    </p>
+  </section>
+
+  <!-- Program Cards -->
+  <section class="py-16 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <!-- Education -->
+    <div class="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition" data-aos="zoom-in">
+      <img src="assets/images/education.jpg" alt="Education Program" class="w-full h-56 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold text-red-600 mb-3">Education Empowerment</h3>
+        <p class="text-gray-600 mb-4">
+          We provide access to quality education, mentorship, and skill-building workshops for children and youth in
+          underserved areas.
+        </p>
+        <a href="donate.html" class="text-red-600 font-semibold hover:underline">Support Education →</a>
+      </div>
+    </div>
+
+    <!-- Healthcare -->
+    <div class="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition" data-aos="zoom-in"
+      data-aos-delay="150">
+      <img src="assets/images/healthcare.jpg" alt="Healthcare Program" class="w-full h-56 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold text-red-600 mb-3">Healthcare Access</h3>
+        <p class="text-gray-600 mb-4">
+          Through mobile clinics and community health drives, we bring essential healthcare and awareness programs to
+          remote regions.
+        </p>
+        <a href="donate.html" class="text-red-600 font-semibold hover:underline">Support Healthcare →</a>
+      </div>
+    </div>
+
+    <!-- Community Development -->
+    <div class="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition" data-aos="zoom-in"
+      data-aos-delay="300">
+      <img src="assets/images/community.jpg" alt="Community Development" class="w-full h-56 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold text-red-600 mb-3">Community Development</h3>
+        <p class="text-gray-600 mb-4">
+          We partner with local leaders to create sustainable programs that promote entrepreneurship, clean water, and
+          food security.
+        </p>
+        <a href="donate.html" class="text-red-600 font-semibold hover:underline">Support Communities →</a>
+      </div>
+    </div>
+  </section>
+
+  <!--Testing-->
+  <section id="programs" class="py-20 bg-gradient-to-b from-white via-red-50 to-white text-gray-800">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12">
+      <h2 class="text-4xl font-bold text-center text-red-700 mb-10">Discover</h2>
+
+      <div class="flex flex-col lg:flex-row gap-10 items-center justify-center">
+        <!-- Sidebar Buttons -->
+        <div class="flex lg:flex-col gap-4 w-full lg:w-1/4">
+          <button
+            class="program-btn active py-3 px-5 rounded-xl border bg-red-600 text-white border-red-600 transition-all duration-300 text-left font-medium">Equipping</button>
+          <button
+            class="program-btn py-3 px-5 rounded-xl border bg-white hover:bg-red-100 border-red-300 text-gray-700 transition-all duration-300 text-left font-medium">Education</button>
+          <button
+            class="program-btn py-3 px-5 rounded-xl border bg-white hover:bg-red-100 border-red-300 text-gray-700 transition-all duration-300 text-left font-medium">Nutrition</button>
+          <button
+            class="program-btn py-3 px-5 rounded-xl border bg-white hover:bg-red-100 border-red-300 text-gray-700 transition-all duration-300 text-left font-medium">Belonging</button>
+        </div>
+
+        <!-- Main Program Display -->
+        <div class="relative w-full lg:w-3/4">
+          <div id="program-card"
+            class="bg-white shadow-xl rounded-2xl overflow-hidden border border-red-100 transition-all duration-500">
+            <img id="program-img"
+              src="assets/images/education.jpg"
+              alt="Program" class="w-full h-64 object-cover">
+            <div class="p-8">
+              <h3 id="program-title" class="text-2xl font-semibold text-red-700 mb-4">Equipping</h3>
+              <p id="program-desc" class="text-gray-700 mb-6">We empower volunteers and caregivers with the training,
+                tools, and resources they need to bring change to their communities.</p>
+              <button class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition">Learn
+                More</button>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <div class="absolute top-1/2 left-0 right-0 flex justify-between px-4 transform -translate-y-1/2">
+            <button id="prevBtn" class="bg-white/80 hover:bg-red-100 p-2 rounded-full shadow">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button id="nextBtn" class="bg-white/80 hover:bg-red-100 p-2 rounded-full shadow">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action -->
+  <section class="bg-red-600 text-white text-center py-16 px-4" data-aos="zoom-in">
+    <h2 class="text-3xl font-bold mb-4">Be Part of the Change</h2>
+    <p class="text-lg mb-8 max-w-2xl mx-auto">
+      Your time, talent, or donation can make a life-changing impact. Join us in transforming communities across Kenya
+      and beyond.
+    </p>
+    <a href="contact.html"
+      class="bg-white text-red-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition">Volunteer With
+      Us</a>
+  </section>
+
+  <script>
+    const programs = [
+      {
+        title: "Equipping",
+        image: "https://images.unsplash.com/photo-1601933470928-cfb43c4437e5?auto=format&fit=crop&w=800&q=80",
+        desc: "We empower volunteers and caregivers with the training, tools, and resources they need to bring change to their communities."
+      },
+      {
+        title: "Education",
+        image: "https://images.unsplash.com/photo-1588075592446-26663c1b9e40?auto=format&fit=crop&w=800&q=80",
+        desc: "We support children’s access to quality education through supplies, mentorship, and scholarships."
+      },
+      {
+        title: "Nutrition",
+        image: "https://images.unsplash.com/photo-1600508771651-8c1d1fcbeab4?auto=format&fit=crop&w=800&q=80",
+        desc: "We run community feeding programs that ensure no child goes hungry and every family gets nourishment."
+      },
+      {
+        title: "Belonging",
+        image: "https://images.unsplash.com/photo-1603575448361-9a6b9f74b2b7?auto=format&fit=crop&w=800&q=80",
+        desc: "We create spaces of safety and belonging — where every child feels valued and loved."
+      }
+    ];
+
+    let index = 0;
+
+    const title = document.getElementById("program-title");
+    const desc = document.getElementById("program-desc");
+    const img = document.getElementById("program-img");
+    const card = document.getElementById("program-card");
+    const btns = document.querySelectorAll(".program-btn");
+
+    function updateProgram(i) {
+      index = i;
+      const p = programs[i];
+
+      card.classList.add("opacity-0", "translate-x-5");
+      setTimeout(() => {
+        title.textContent = p.title;
+        desc.textContent = p.desc;
+        img.src = p.image;
+        card.classList.remove("opacity-0", "translate-x-5");
+      }, 200);
+
+      btns.forEach((b, j) => {
+        b.classList.toggle("bg-red-600", j === i);
+        b.classList.toggle("text-white", j === i);
+        b.classList.toggle("border-red-600", j === i);
+        b.classList.toggle("bg-white", j !== i);
+        b.classList.toggle("text-gray-700", j !== i);
+      });
+    }
+
+    btns.forEach((b, i) => b.addEventListener("click", () => updateProgram(i)));
+    document.getElementById("nextBtn").addEventListener("click", () => updateProgram((index + 1) % programs.length));
+    document.getElementById("prevBtn").addEventListener("click", () => updateProgram((index - 1 + programs.length) % programs.length));
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+    <p>&copy; <span id="year"></span> Heart of Generation Foundation. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

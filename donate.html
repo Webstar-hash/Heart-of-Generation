@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate | Heart of Generation Foundation</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    input,
+    select,
+    textarea {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/logo.png" alt="Foundation Logo" class="w-12 h-12 object-contain">
+        <h1 class="text-xl font-bold text-red-600">Heart of Generation Foundation</h1>
+      </div>
+      <ul class="hidden md:flex space-x-8 font-semibold">
+        <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+        <li><a href="about.html" class="hover:text-red-500">About</a></li>
+        <li><a href="programs.html" class="hover:text-red-500">Programs</a></li>
+        <li><a href="donate.html" class="text-red-500">Donate</a></li>
+        <li><a href="contact.html" class="hover:text-red-500">Contact</a></li>
+        <li><a href="gallery.html" class="hover:text-red-500">Gallery</a></li>
+      </ul>
+      <button class="md:hidden text-gray-700" id="menu-toggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pt-28 bg-red-600 text-white text-center py-16">
+    <h1 class="text-4xl font-bold mb-3" data-aos="fade-down">Support Our Mission</h1>
+    <p class="text-lg max-w-2xl mx-auto" data-aos="fade-up">
+      Every contribution helps transform lives and build stronger communities.
+    </p>
+  </section>
+
+  <!-- Donation Form -->
+  <section class="py-16 px-6 max-w-3xl mx-auto">
+    <div class="bg-white shadow-xl rounded-2xl p-8" data-aos="fade-up">
+      <h2 class="text-2xl font-bold text-red-600 mb-4 text-center">Make a donation</h2>
+
+      <form action="#" method="POST" class="space-y-6">
+        <div>
+          <label class="block mb-2 font-semibold text-gray-700">Full Name</label>
+          <input type="text" placeholder="Your name" required
+            class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-red-400" />
+        </div>
+
+        <div>
+          <label class="block mb-2 font-semibold text-gray-700">Email Address</label>
+          <input type="email" placeholder="you@example.com" required
+            class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-red-400" />
+        </div>
+
+        <div>
+          <label class="block mb-2 font-semibold text-gray-700">What would you like to support?</label>
+          <div class="flex flex-wrap gap-3">
+            <button class="purpose-btn bg-blue-500 text-white px-4 py-2 rounded-lg btn-animate">Food</button>
+            <button class="purpose-btn bg-green-500 text-white px-4 py-2 rounded-lg btn-animate">Medicine</button>
+            <button class="purpose-btn bg-yellow-500 text-white px-4 py-2 rounded-lg btn-animate">Education</button>
+            <button class="purpose-btn bg-purple-500 text-white px-4 py-2 rounded-lg btn-animate">Shelter</button>
+            <button class="purpose-btn bg-pink-500 text-white px-4 py-2 rounded-lg btn-animate">Others</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="block mb-2 font-semibold text-gray-700">Donation Amount (KES)</label>
+          <input type="number" placeholder="e.g. 5000" required
+            class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-red-400" />
+        </div>
+
+        <div>
+          <label class="block mb-2 font-semibold text-gray-700">Donation Type</label>
+          <select class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-red-400">
+            <option>One-Time</option>
+            <option>Monthly</option>
+            <option>Annual</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-2 font-semibold text-gray-700">Message (optional)</label>
+          <textarea placeholder="Your message or intention..." rows="4"
+            class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-red-400"></textarea>
+        </div>
+
+        <div>
+          <button  type="submit"
+            class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition">
+            Donate via Mpesa
+          </button>
+
+          <button type="submit"
+            class="w-full mt-2 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition">
+            Donate via Card
+          </button>
+        </div>
+
+
+      </form>
+    </div>
+  </section>
+
+  <!-- Payment Options -->
+  <section class="py-16 bg-gray-100 text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-red-600 mb-6">Ways to Give</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto px-6">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl mb-2">M-Pesa</h3>
+        <p class="text-gray-600">Paybill: <strong>123456</strong><br>Account: <strong>HeartOfGen</strong></p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl mb-2">Bank Transfer</h3>
+        <p class="text-gray-600">Account Name: <strong>Heart of Generation Foundation</strong><br>Co-operative
+          Bank<br>Acc No: <strong>0123456789</strong></p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl mb-2">International Donations</h3>
+        <p class="text-gray-600">Contact us at <strong>info@heartofgen.org</strong> for global transfer options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>&copy; <span id="year"></span> Heart of Generation Foundation. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const purposeBtns = document.querySelectorAll('.purpose-btn');
+    let selectedPurpose = '';
+    purposeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        purposeBtns.forEach(b => b.classList.remove('ring-4', 'ring-offset-2', 'ring-blue-400'));
+        btn.classList.add('ring-4', 'ring-offset-2', 'ring-blue-400');
+        selectedPurpose = btn.innerText;
+      });
+    });
+  </script>
+</body>
+
+</html>

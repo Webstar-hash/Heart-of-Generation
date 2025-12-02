@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Heart of Generation Foundation</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/logo.png" alt="Foundation Logo" class="w-12 h-12 object-contain">
+        <h1 class="text-xl font-bold text-red-600">Heart of Generation Foundation</h1>
+      </div>
+      <ul class="hidden md:flex space-x-8 font-semibold">
+        <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+        <li><a href="about.html" class="text-red-500">About</a></li>
+        <li><a href="programs.html" class="hover:text-red-500">Programs</a></li>
+        <li><a href="donate.html" class="hover:text-red-500">Donate</a></li>
+        <li><a href="contact.html" class="hover:text-red-500">Contact</a></li>
+        <li><a href="gallery.html" class="hover:text-red-500">Gallery</a></li>
+      </ul>
+      <button class="md:hidden text-gray-700" id="menu-toggle">☰</button>
+
+
+    </div>
+  </nav>
+
+  <div class="absolute h-12 w-full top-6 mt-20">
+    <button onclick="location.href='about.html'"
+      class="absolute top-6 left-5  items-center text-red-600 font-semibold hover:underline">
+      ← Back to About Us
+    </button>
+  </div>
+
+
+
+  <div id="coming soon" class="h-screen w-full text text-3xl text-center justify-center items-center flex flex-col">
+    <h2>COMING SOON!</h2>
+    <h3>Thanks for Waiting!</h3>
+
+    <div id="navModal" class="bg-white border border-gray-300 text-base w-40 rounded-lg p-2 flex flex-col justify-center items-center absolute top-8 right-8 z-50 ">
+      <a href="index.html" class="hover:text-red-500 border-1 w-full mb-1">Home</a>
+      <a href="about.html" class="text-red-500 border-1 w-full mb-1">About</a>
+      <a href="programs.html" class="hover:text-red-500 border-1 w-full mb-1">Programs</a>
+      <a href="donate.html" class="hover:text-red-500 border-1 w-full mb-1">Donate</a>
+      <a href="contact.html" class="hover:text-red-500 border-1 w-full mb-1">Contact</a>
+      <a href="gallery.html" class="hover:text-red-500 border-1 w-full mb-1">Gallery</a>
+    </div>
+  </div>
+
+
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>

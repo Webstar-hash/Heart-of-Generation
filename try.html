@@ -1,0 +1,115 @@
+  <div id="aboutLearnMore" class="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm hidden">
+    <div class="overflow-y-auto h-full w-full">
+      <!-- CONTENT WRAPPER -->
+      <div
+        class="bg-white dark:bg-black text-black dark:text-white max-w-5xl mx-auto my-12 p-8 rounded-xl shadow-2xl relative">
+
+        <!-- CLOSE BUTTON -->
+        <button onclick="closeLearnMore()"
+          class="absolute top-6 right-6 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition">
+          ✕
+        </button>
+
+        <!-- HEADER -->
+        <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-10 text-red-600">
+          Learn More About Us
+        </h1>
+
+        <!-- SECTION 1: OUR STORY -->
+        <section class="mb-20">
+          <h2 class="text-3xl font-bold mb-4 border-l-4 border-red-600 pl-4">
+            Our Story
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <p class="leading-relaxed text-lg">
+              Founded with a vision to uplift the vulnerable, our NGO began as a small grassroots movement
+              dedicated to restoring dignity through education, feeding programs, youth empowerment, and
+              emergency support.
+              <br><br>
+              Over the years, our commitment has touched thousands of lives across Kenya—reaching informal
+              settlements, remote villages, and urban communities struggling with poverty, hunger, and
+              inequality.
+            </p>
+
+            <!-- Image sliding in -->
+            <img src="assets/story1.jpg"
+              class="rounded-lg shadow-lg opacity-0 translate-x-8 transition-all duration-700 reveal"
+              alt="Founding story image">
+          </div>
+
+          <p class="mt-6 text-lg">
+            Today, our mission remains the same: **serve with compassion, act with integrity, and empower with
+            purpose**.
+          </p>
+
+          <!-- SECOND IMAGE -->
+          <img src="assets/story2.jpg"
+            class="rounded-lg shadow-xl mt-8 w-full opacity-0 -translate-x-8 transition-all duration-700 reveal"
+            alt="Community outreach">
+          <p class="text-sm text-gray-400 mt-2">
+            Community outreach event — providing food and medical assistance.
+          </p>
+        </section>
+
+        <!-- SECTION 2: OUR TEAM -->
+        <section class="mb-20">
+          <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-600 pl-4">
+            Meet the Team
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-10">
+
+            <!-- Team Member -->
+            <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-xl transition">
+              <img src="assets/team1.jpg" class="rounded-lg w-full mb-4" alt="Team member">
+              <h3 class="text-xl font-bold">Jane Mwangi</h3>
+              <p class="text-red-600 font-semibold">Founder & Director</p>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Leads the organization with a vision for sustainable community transformation.
+              </p>
+            </div>
+
+            <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-xl transition">
+              <img src="assets/team2.jpg" class="rounded-lg w-full mb-4" alt="Team member">
+              <h3 class="text-xl font-bold">Samuel Otieno</h3>
+              <p class="text-red-600 font-semibold">Programs Coordinator</p>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Oversees field operations and manages volunteer teams.
+              </p>
+            </div>
+
+            <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-xl transition">
+              <img src="assets/team3.jpg" class="rounded-lg w-full mb-4" alt="Team member">
+              <h3 class="text-xl font-bold">Mary Wairimu</h3>
+              <p class="text-red-600 font-semibold">Child Welfare Officer</p>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                Ensures the safety and well-being of children enrolled in our programs.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SECTION 3: PARTNERS -->
+        <section class="mb-20">
+          <h2 class="text-3xl font-bold mb-8 border-l-4 border-red-600 pl-4">
+            Our Partners
+          </h2>
+
+          <p class="mb-6 text-lg">
+            Our impact is made possible through strong partnerships with organizations, donors, and companies
+            dedicated to community transformation.
+          </p>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <img src="assets/partner1.png" class="h-20 mx-auto opacity-70 hover:opacity-100 transition" alt="">
+            <img src="assets/partner2.png" class="h-20 mx-auto opacity-70 hover:opacity-100 transition" alt="">
+            <img src="assets/partner3.png" class="h-20 mx-auto opacity-70 hover:opacity-100 transition" alt="">
+            <img src="assets/partner4.png" class="h-20 mx-auto opacity-70 hover:opacity-100 transition" alt="">
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>

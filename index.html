@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heart of Generation Foundation</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!--Favicon logo-->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/logo.png" alt="Foundation Logo" class="w-12 h-12 object-contain">
+        <h1 class="text-xl font-bold text-red-600">Heart of Generation Foundation</h1>
+      </div>
+      <ul class="hidden md:flex space-x-8 font-semibold">
+        <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+        <li><a href="about.html" class="hover:text-red-500">About</a></li>
+        <li><a href="programs.html" class="hover:text-red-500">Programs</a></li>
+        <li><a href="donate.html" class="hover:text-red-500">Donate</a></li>
+        <li><a href="contact.html" class="hover:text-red-500">Contact</a></li>
+        <li><a href="gallery.html" class="hover:text-red-500">Gallery</a></li>
+      </ul>
+      <button class="md:hidden text-gray-700" id="menu-toggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-screen overflow-hidden">
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="assets/videos/school 2.mp4" type="video/mp4">
+    </video>
+    <div
+      class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center text-white p-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Empowering Generations Through Compassion</h1>
+      <p class="text-lg mb-8 max-w-2xl" data-aos="fade-up" data-aos-delay="200">Together, we can bring hope,
+        opportunity, and lasting change to communities in need.</p>
+      <div class="space-x-4">
+        <button onclick="openModal('donationModal')"
+          class="bg-red-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-red-700 transition">Donate
+          Now</button>
+        <a href="about.html"
+          class="bg-white text-red-500 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition">Learn
+          More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO ARE WE SECTION -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Text -->
+      <div class="space-y-6">
+        <h2 class="text-4xl font-bold text-primary">Who Are We?</h2>
+
+        <p class="text-lg leading-relaxed text-gray-700">
+          Heart of Generation Foundation is a humanitarian organization dedicated
+          to empowering vulnerable communities across Kenya.
+          We focus on education, nutrition, health, and empowerment programs
+          that transform lives and give hope to children, youth, and families
+          in underserved areas.
+          <br><br>
+          With every project, every meal, and every act of compassion,
+          we are building a generation that is stronger, healthier, and full of opportunity.
+        </p>
+      </div>
+
+      <!-- Image (Fade In From Right) -->
+      <div class="opacity-0 translate-x-10 transition-all duration-1000 ease-out" id="whoAreWeImg">
+        <img src="assets/images/water.jpg" alt="Humanitarian outreach"
+          class="rounded-2xl shadow-xl w-full object-cover" />
+        <p class="text-sm text-gray-500 mt-2">Our volunteers during a community outreach program.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Impact Stats -->
+  <section class="bg-gray-200 py-20">
+    <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center text-red-500">
+      <div><span class="text-4xl font-bold text-primary">500+</span>
+        <p class="mt-2">Children Fed / Month</p>
+      </div>
+      <div><span class="text-4xl font-bold text-primary">200+</span>
+        <p class="mt-2">Students Supported</p>
+      </div>
+      <div><span class="text-4xl font-bold text-primary">50+</span>
+        <p class="mt-2">Community Camps</p>
+      </div>
+      <div><span class="text-4xl font-bold text-primary">300+</span>
+        <p class="mt-2">Volunteers</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-light">
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+      <h2 class="text-3xl font-bold text-dark">Stories from the Ground</h2>
+      <blockquote class="text-xl italic text-gray-700">“Thanks to the Feeding Program, my children no longer go to bed
+        hungry. This foundation changed our lives.”</blockquote>
+      <p class="text-lg font-semibold text-primary text-red-500">— Jane, mother of three</p>
+    </div>
+  </section>
+
+  <!-- Get Involved CTA -->
+  <section class="bg-red-500 text-white py-20 text-center">
+    <h2 class="text-4xl font-bold mb-6">Join Us In Making Impact</h2>
+    <p class="mb-8">Volunteer, donate, or partner with us to build a brighter future.</p>
+    <div class="flex justify-center gap-4">
+      <button onclick="openModal('donationModal')"
+        class="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-red-500 transition">Donate
+        Now</button>
+      <a href="contact.html"
+        class="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-red-500 transition">Volunteer /
+        Contact</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+    <p>&copy; <span id="year"></span> Heart of Generation Foundation. All rights reserved.</p>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Fade-in on scroll animation
+    const img = document.getElementById("whoAreWeImg");
+
+    function revealImage() {
+      const rect = img.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        img.classList.remove("opacity-0", "translate-x-10");
+        img.classList.add("opacity-100", "translate-x-0");
+        window.removeEventListener("scroll", revealImage);
+      }
+    }
+
+    window.addEventListener("scroll", revealImage);
+    revealImage();
+  </script>
+</body>
+
+</html>

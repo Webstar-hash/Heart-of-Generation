@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Heart of Generation Foundation</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/logo.png" alt="Foundation Logo" class="w-12 h-12 object-contain">
+        <h1 class="text-xl font-bold text-red-600">Heart of Generation Foundation</h1>
+      </div>
+      <ul class="hidden md:flex space-x-8 font-semibold">
+        <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+        <li><a href="about.html" class="text-red-500">About</a></li>
+        <li><a href="programs.html" class="hover:text-red-500">Programs</a></li>
+        <li><a href="donate.html" class="hover:text-red-500">Donate</a></li>
+        <li><a href="contact.html" class="hover:text-red-500">Contact</a></li>
+        <li><a href="gallery.html" class="hover:text-red-500">Gallery</a></li>
+      </ul>
+      <button class="md:hidden text-gray-700" id="menu-toggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pt-28 bg-red-600 text-white text-center py-16">
+    <h1 class="text-4xl font-bold mb-3" data-aos="fade-down">About Us</h1>
+    <p class="text-lg max-w-2xl mx-auto" data-aos="fade-up">Heart of Generation is a community based organization that
+      provides food, training and scholarships to those in need.</p>
+
+    <button onclick="location.href='about-learnmore.html'"
+      class="bg-black hover:bg-red-700 mt-5 text-white px-6 py-3 rounded-xl shadow-lg transition">
+      Learn More
+    </button>
+
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="py-16 max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Mission</h2>
+      <p class="text-gray-600 leading-relaxed">
+        Our mission is to empower underprivileged communities by providing access to education, healthcare, and economic
+        opportunities.
+        We believe in building a sustainable future where every child and adult can thrive with dignity and hope.
+      </p>
+    </div>
+    <div data-aos="fade-left">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Vision</h2>
+      <p class="text-gray-600 leading-relaxed">
+        To create a world where compassion drives progress and every generation is equipped with the tools, knowledge,
+        and support to build a better tomorrow.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="bg-gray-100 py-16 px-4">
+    <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-4">Our Story</h2>
+      <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Heart of Generation Foundation was founded in 2020 by a group of passionate individuals who saw the need to
+        bridge the gap between potential and opportunity.
+        What began as a small local effort has grown into a nationwide movement dedicated to nurturing hope and
+        inspiring change through youth empowerment, education, and social programs.
+      </p>
+    </div>
+  </section>
+
+  <!-- Leadership / Team -->
+  <section class="py-16 max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-10" data-aos="fade-up">Meet Our Leadership</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <!-- Leader 1 -->
+      <div class="bg-white shadow-lg rounded-2xl p-6" data-aos="fade-up">
+        <img src="assets/images/leader 1.jpg" alt="Leader 1" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+        <h3 class="text-xl font-semibold text-red-600">ReinHard Fabian</h3>
+        <p class="text-gray-500 mb-2">Founder & CEO</p>
+        <p class="text-gray-600 text-sm">A visionary leader passionate about education and social reform for youth in
+          underserved communities.</p>
+      </div>
+
+      <!-- Leader 2 -->
+      <div class="bg-white shadow-lg rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/images/leader 2.jpg" alt="Leader 2" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+        <h3 class="text-xl font-semibold text-red-600">David Kamau</h3>
+        <p class="text-gray-500 mb-2">Program Director</p>
+        <p class="text-gray-600 text-sm">Coordinates our community outreach and youth empowerment programs across Kenya.
+        </p>
+      </div>
+
+      <!-- Leader 3 -->
+      <div class="bg-white shadow-lg rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/images/leader 3.jpg" alt="Leader 3" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+        <h3 class="text-xl font-semibold text-red-600">Sarah Otieno</h3>
+        <p class="text-gray-500 mb-2">Finance & Partnerships Lead</p>
+        <p class="text-gray-600 text-sm">Ensures financial transparency and builds meaningful partnerships to support
+          our initiatives.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-red-600 text-white text-center py-16 px-4" data-aos="zoom-in">
+    <h2 class="text-3xl font-bold mb-4">Join Our Mission</h2>
+    <p class="text-lg mb-8 max-w-2xl mx-auto">
+      Whether you want to volunteer, donate, or partner with us — your support helps us transform lives and uplift
+      communities.
+    </p>
+    <a href="donate.html"
+      class="bg-white text-red-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition">Donate Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+    <p>&copy; <span id="year"></span> Heart of Generation Foundation. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
